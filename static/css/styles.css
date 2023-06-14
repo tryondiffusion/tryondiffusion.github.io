@@ -1,0 +1,944 @@
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(35, 35, 35); */
+  color: rgb(245, 245, 245);
+}
+
+a {
+  text-decoration: none;
+}
+
+div.white {
+  background-color: rgb(255, 255, 255);
+  color: rgb(26, 26, 26);
+  margin: 0;
+  padding: 0;
+}
+
+div.white figure {
+  margin: 0;
+  padding: 0 auto;
+}
+
+div.ablation {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  width: 60%; /* Adjust ablation width to 80% */
+  margin: 0 auto 50px;
+}
+
+div.ablation img {
+  width: 100%;
+  display: block;
+}
+
+div.ablation div.column {
+  text-align: center;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+div.ablative {
+  background-color: rgb(255, 255, 255);
+  color: rgb(26, 26, 26);
+  margin: 0;
+  padding: 0;
+}
+
+div.ablative figure {
+  margin: 0;
+  padding: 0 auto;
+}
+
+.playground-container {
+  display: flex;
+  width: 100%;
+}
+
+.playground-column {
+  width: 50%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption-picker {
+  text-align: center;
+}
+
+.caption-picker select {
+  border: none;
+  outline: none;
+  font-size: 2em;
+  color: white;
+  background-color: transparent;
+  appearance: none;
+}
+
+.caption-picker select:hover {
+  cursor: pointer;
+  color: green;
+}
+
+
+.gallery-main-image {
+  width: 100%;
+}
+
+.image-picker {
+  width: 100%;
+}
+
+.icon {
+  width: 12.5%;
+  float: left;
+  padding-right: 2px;
+  padding-top: 2px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+div.authors {
+  background-color: rgb(26, 26, 26);
+  /* background-color: rgb(245, 245, 245); */
+  color: rgb(255, 255, 255);
+}
+
+div.authors p {
+  text-align: center;
+  /* max-width 1000px; */
+  margin: 0;
+  padding: 0;
+}
+
+div.abstract {
+  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(245, 245, 245); */
+  color: rgb(255, 255, 255);
+}
+
+div.abstract div.inside p.text {
+  padding: 0 0 25px 0;
+  margin: 0;
+  text-align: justify;
+}
+
+div.limitations {
+  background-color: rgb(26, 26, 26);
+  /* background-color: rgb(245, 245, 245); */
+  color: rgb(255, 255, 255);
+}
+
+div.limitations div.inside p.text {
+  padding: 0 0 25px 0;
+  margin: 0;
+  text-align: justify;
+}
+
+a.read-paper button:hover {
+  background-color: rgb(230, 230, 230);
+  /* background-color: rgb(26, 26, 26); */
+}
+
+#leftColumn, #rightColumn {
+  width: 30%;
+}
+
+#middleColumn {
+  width: 40%;
+}
+
+#demoDisplayArea {
+  width: 100%;
+  height: auto;
+}
+
+div.teaser {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+}
+
+div.teaser div.column {
+  text-align: center;
+}
+
+div.teaser div.column img {
+  width: 100%; /* You can adjust as per your requirement */
+}
+
+div.tryon_demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;   /* adjust the height to auto */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;  /* add some padding to create a smaller margin effect */
+}
+
+div.tryon_demo div.main {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+div.tryon_demo div.main div.column {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+div.tryon_demo div.main div.column img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 80vh;
+}
+
+div.tryon_demo div.main div.column p {
+  margin: 10px 0;
+  font-size: 1.4em;
+  color:rgb(0, 0, 0);
+}
+
+div.tryon_demo div.main div.column button {
+  margin: 20px 30px auto 30px;
+  color: black;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+
+div.tryon_demo div.main div.column button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 899px) {
+  div.tryon_demo div.main div.column p {
+    margin: 10px 0;
+    font-size: 1em;
+    color:rgb(0, 0, 0);
+  }
+
+  div.ablation h1 {
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    text-align: center;
+    margin: 50px auto 30px;
+  }
+  
+  div.ablation div.column p {
+    margin: 0;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+  }
+
+  div.teaser div.column p {
+    color: rgb(0, 0, 0);
+    font-size: 1.0em;
+  }
+
+  div.video_wrapper {
+    width: 100%;
+  }
+  
+  div.video_container {
+    display: grid;
+  }
+  
+  div.video_container video {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0%;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  div.video_container div.caption {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  
+  div.video_container:hover div.caption {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  div.video_container div.caption div {
+    margin: 0 auto;
+    display: none;
+    font-size: 1.5em;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  div.video_container:hover div.caption div {
+    display: block;
+  }
+
+
+  div.nomobile {
+    display: none;
+  }
+
+  h1 {
+    font-family: 'Open Sans';
+    font-size: 2em;
+    padding: 0 25px;
+  }
+
+  h2 {
+    font-family: 'Open Sans';
+    font-size: 1em;
+    padding: 0 25px;
+  }
+
+  h2.nomobile {
+    display: none;
+  }
+
+  h2.mobileonly {
+    font-family: 'Open Sans';
+    font-size: 1em;
+    padding: 0 25px;
+    margin: 0;
+  }
+
+  div.nav {
+    position: relative;
+  }
+
+  div.nav a {
+    margin: 25px 0px;
+    display: block;
+    width: 100px;
+    padding: 10px 20px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: white;
+    font-family: 'Open Sans';
+  }
+
+  div.content1 {
+    background-color: rgb(35, 35, 35);
+    color: rgb(245, 245, 245);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.content1.reversed {
+    flex-direction: column-reverse;
+  }
+
+  div.content div {
+    padding: 25px;
+    width: 100%;
+  }
+
+  div.content1 div.right {
+    padding: 25px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 26, 26);
+  }
+  
+  div.content1 h1 {
+    font-size: 1.5em;
+    padding: 25px;
+  }
+  
+  div.content1 ul.highlights {
+    font-size: 1em;
+    margin: 0 0 0 50px;
+    padding: 0 25px 0 0;
+    list-style-type: decimal;
+  }
+  
+  div.content1 ul.highlights li {
+    padding: 0 0 10px 0;
+  }
+  
+  div.content1 table.pretty {
+    margin: 0 auto;
+  }
+  
+  div.content1 table.pretty th {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  div.content1 table.pretty th.fid {
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  div.content1 table.pretty td {
+    font-size: 1em;
+  }
+  
+  div.content1 table.pretty td.methods {
+    text-align: center;
+  }
+
+  div.content1 table.pretty td.model {
+    padding: 0 10px;
+    text-align: center;
+    color: rgb(123, 123, 123);
+  }
+  
+  div.content1 table.pretty td.fid {
+    padding: 0 10px;
+    text-align: center;
+    color: rgb(123, 123, 123);
+  }
+
+  div.content1 table.pretty caption {
+    /* text-align: center; */
+    text-align: left;
+    font-size: 1em;
+    color: rgb(26, 26, 26);
+  }
+
+  div.content {
+    padding: 25px 25px 0px 25px;
+  }
+
+  div.content h1 {
+    font-size: 1.2em;
+  }
+
+  div.content p {
+    padding: 0 25px 25px 25px;
+    margin: 0;
+    font-size: 1.6em;
+  }
+
+  div.content p.smaller {
+    padding: 0 25px 25px 25px;
+    margin: 0;
+    font-size: 1em;
+  }
+
+  div.content a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+
+  div.content a:link {
+    text-decoration: none;
+  }
+
+  div.content a:visited {
+    text-decoration: none;
+  }
+
+  div.content a:active {
+    text-decoration: none;
+  }
+
+  div.content a:hover {
+    text-decoration: none;
+  }
+
+  div.authors {
+    padding: 25px 25px;
+  }
+
+  div.abstract {
+    font-size: 1em;
+    padding: 25px;
+  }
+
+  div.abstract div.inside {
+    padding: 0;
+    text-align: justify;
+    margin: 0;
+  }
+
+  div.limitations {
+    font-size: 1em;
+    padding: 25px;
+  }
+
+  div.limitations div.inside {
+    padding: 0;
+    text-align: justify;
+    margin: 0;
+  }
+
+  div.white figure img {
+    width: 100%;
+    padding: 25px 50px;
+  }
+
+  div.white figure figcaption {
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  div.ablative figure img {
+    width: 100%;
+    padding: 25px 50px;
+  }
+
+  div.ablative figure figcaption {
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  div.ablative figure figcaption p {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-size: 1em;
+  }
+
+  div.header_light_gray {
+    color: rgb(26, 26, 26);
+    padding: 25px 10px;
+    background-color: rgb(245, 245, 245);
+  }
+
+  div.header_light_gray h1 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  div.header_light_gray h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  div.header_dark_gray {
+    padding: 25px 10px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(245, 245, 245);
+  }
+
+  div.header_dark_gray h1 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  div.header_dark_gray h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  div.header_dark {
+    padding: 25px 10px;
+    background-color: rgb(35, 35, 35);
+    color: rgb(245, 245, 245);
+  }
+
+  div.header_dark h1 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  div.header_dark h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  a.read-paper button {
+    width: 130px;
+    padding: 10px;
+    background: none;
+    font: inherit;
+    border: 1px solid black;
+    /* border: 1px solid white; */
+    color: black;
+    /* color: white; */
+    border-radius: 4px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  div.ablation h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-align: center;
+    margin: 30px auto 30px;
+  }
+  
+  div.ablation div.column p {
+    margin: 0;
+    font-size: 1.4em;
+    color: rgb(0, 0, 0);
+  }
+
+  div.teaser div.column p {
+    color: rgb(0, 0, 0);
+    font-size: 1.4em;
+  }
+
+  div.video_wrapper {
+    width: 100%;
+  }
+  
+  div.video_container {
+    display: grid;
+  }
+  
+  div.video_container video {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0%;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  div.video_container div.caption {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  
+  div.video_container:hover div.caption {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  div.video_container div.caption div {
+    margin: 0 auto;
+    display: none;
+    font-size: 3em;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  div.video_container:hover div.caption div {
+    display: block;
+  }
+
+  h1 {
+    font-family: 'Open Sans';
+    font-size: 3em;
+    padding: 0 25px;
+  }
+  h2 {
+    font-family: 'Open Sans';
+    font-size: 2em;
+    padding: 0 25px;
+  }
+
+  h2.mobileonly {
+    display: none;
+  }
+
+  div.nav {
+    position: relative;
+  }
+
+  div.nav a {
+    margin: 25px 0px;
+    display: block;
+    width: 150px;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0px;
+    color: white;
+    font-family: 'Open Sans';
+    float: right;
+    text-align: right;
+  }
+
+  div.content1 {
+    background-color: rgb(35, 35, 35);
+    color: rgb(245, 245, 245);
+    display: flex;
+  }
+
+  div.content1 div {
+    padding: 50px;
+    width: 50%;
+  }
+
+  div.content1 p {
+    font-size: 1.5em;
+  }
+
+  div.content1 div.right {
+    padding: 50px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 26, 26);
+  }
+  
+  div.content1 h1 {
+    font-size: 2em;
+  }
+  
+  div.content1 ul.highlights {
+    font-size: 1.5em;
+    margin: 0 0 0 75px;
+    padding: 0;
+    list-style-type: decimal;
+  }
+  
+  div.content1 ul.highlights li {
+    padding: 0 0 25px 0;
+  }
+  
+  div.content1 table.pretty {
+    margin: 0 auto;
+  }
+  
+  div.content1 table.pretty th {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  div.content1 table.pretty th.fid {
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  div.content1 table.pretty td {
+    font-size: 1.2em;
+  }
+
+  div.content1 table.pretty td.methods {
+    text-align: center;
+  }
+  
+  div.content1 table.pretty td.model {
+    padding: 0 10px;
+    text-align: center;
+    /* padding: 0 50px; */
+    color: rgb(123, 123, 123);
+  }
+  
+  div.content1 table.pretty td.fid {
+    /* Add new paddind */
+    padding: 0 10px;
+    text-align: center;
+    color: rgb(123, 123, 123);
+  }
+
+  div.content1 table.pretty caption {
+    text-align: left;
+    /* text-align: center; */
+    color: rgb(26, 26, 26);
+    /* font-size: 1.5em; */
+    font-size: 1.2em;
+  }
+
+  div.content {
+    padding: 100px 100px 50px 100px;
+  }
+
+  div.content h1 {
+    font-size: 2.5em;
+  }
+
+  div.content p {
+    padding: 0 50px 50px 50px;
+    margin: 0;
+    font-size: 2em; 
+  }
+
+  div.content p.smaller {
+    padding: 0 50px 50px 50px;
+    margin: 0;
+    font-size: 1.4em;
+  }
+
+  div.content a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+
+  div.content a:link {
+    text-decoration: none;
+  }
+
+  div.content a:visited {
+    text-decoration: none;
+  }
+
+  div.content a:active {
+    text-decoration: none;
+  }
+
+  div.content a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  div.authors {
+    padding: 50px 100px;
+    font-size: 1.5em;
+  }
+
+  div.abstract {
+    padding: 50px 100px;
+    font-size: 1.4em;
+  }
+
+  div.abstract div.inside {
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  div.abstract div.inside p.text {
+    padding: 0 0 50px 0;
+    margin: 0;
+  }
+
+  div.limitations {
+    padding: 50px 100px;
+    font-size: 1.4em;
+  }
+
+  div.limitations div.inside {
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  div.limitations div.inside p.text {
+    padding: 0 0 50px 0;
+    margin: 0;
+  }
+
+  div.white figure img {
+    display: block;
+    margin: auto;
+    /* width: 100%; */
+    width: 1000px;
+    padding: 25px 50px;
+    /* padding: 50px; */
+  }
+
+  div.white figure figcaption {
+    /* bottom: 0px; */
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  div.white figure figcaption p {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-size: 1.4em;
+  }
+
+  div.ablative figure img {
+    display: block;
+    margin: auto;
+    /* width: 100%; */
+    width: 1000px;
+    padding: 25px 50px;
+    /* padding: 50px; */
+  }
+
+  div.ablative figure figcaption {
+    /* bottom: 0px; */
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  div.ablative figure figcaption p {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-size: 2em;
+  }
+
+  div.header_light_gray {
+    color: rgb(26, 26, 26);
+    padding: 50px;
+    background-color: rgb(245, 245, 245);
+  }
+
+  div.header_light_gray h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  div.header_light_gray h2 {
+    font-size: 2.0em;
+    text-align: center;
+  }
+
+  div.header_dark_gray {
+    padding: 50px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(245, 245, 245);
+  }
+
+  div.header_dark_gray h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  div.header_dark_gray h2 {
+    font-size: 2.0em;
+    text-align: center;
+  }
+
+  div.header_dark {
+    padding: 50px;
+    background-color: rgb(35, 35, 35);
+    color: rgb(245, 245, 245);
+  }
+
+  div.header_dark h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  div.header_dark h2 {
+    font-size: 2.0em;
+    text-align: center;
+  }
+
+  a.read-paper button {
+    width: 200px;
+    height: 50px;
+    background: none;
+    font: inherit;
+    border: 1px solid black;
+    /* border: 1px solid white; */
+    color: black;
+    /* color: white; */
+    border-radius: 4px;
+  }
+}
